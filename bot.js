@@ -244,4 +244,10 @@ cron.schedule('* * * * *', async () => {
 });
 
 bot.start();
-console.log("🚀 Super Bot ishga tushdi!");
+console.log("🚀 Super Bot ishga tushdi!");// --- RENDER UCHUN "SOXTA SAYT" (HEARTBEAT) ---
+const http = require("http");
+http.createServer((req, res) => {
+  res.write("Bot ishlab turibdi!");
+  res.end();
+}).listen(process.env.PORT || 3000);
+
